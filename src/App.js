@@ -14,12 +14,12 @@ function App() {
           <input
           name="name"
           placeholder="Name"
-
+            value={input.name}
           />
           <input
           name="age"
           placeholder="Age"
-          
+          value={input.age}
           />
         </div>
           )
