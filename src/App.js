@@ -21,6 +21,12 @@ function App() {
     e.preventDefault();
     console.log(inputfields);
   }
+
+  const removefields =(index)=>{
+    let data=[...inputfields];
+    data.splice(index,1)
+    setInputfields(data);
+  }
   return (
     <div className="App">
       <form onSubmit={submit}>
@@ -39,6 +45,7 @@ function App() {
           value={input.age}
           onChange={(event)=>handleFormChange(index,event)}
           />
+          <button onClick={(index)=>removefields(index)}>Remove</button>
         </div>
           )
         })
