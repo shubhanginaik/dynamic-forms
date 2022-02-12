@@ -10,16 +10,20 @@ function App() {
     let data=[...inputfields]
     data[index][event.target.name]=event.target.value
     setInputfields(data)
-    console.log(data)
+    //console.log(data)
   }
   const addFilds=(e)=>{
     e.preventDefault();
     let newField = { name:'', age:'' }
     setInputfields([...inputfields,newField])
   }
+  const submit = (e) =>{
+    e.preventDefault();
+    console.log(inputfields);
+  }
   return (
     <div className="App">
-      <form>
+      <form onSubmit={submit}>
         {inputfields.map((input,index)=>{
           return(
         <div key={index}>
@@ -40,6 +44,7 @@ function App() {
         })
         }
         <button onClick={addFilds}>Add more</button>
+        <button onClick={submit}>Submit</button>
       </form>
     </div>
   );
