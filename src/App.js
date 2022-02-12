@@ -12,6 +12,11 @@ function App() {
     setInputfields(data)
     console.log(data)
   }
+  const addFilds=(e)=>{
+    e.preventDefault();
+    let newField = { name:'', age:'' }
+    setInputfields([...inputfields,newField])
+  }
   return (
     <div className="App">
       <form>
@@ -34,6 +39,7 @@ function App() {
           )
         })
         }
+        <button onClick={addFilds}>Add more</button>
       </form>
     </div>
   );
