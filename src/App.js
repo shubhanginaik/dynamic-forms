@@ -29,10 +29,11 @@ function App() {
   }
   return (
     <div className="App">
+      <h1>Dynamic form</h1>
       <form onSubmit={submit}>
         {inputfields.map((input,index)=>{
           return(
-        <div key={index}>
+        <div className="responsive" key={index}>
           <input
           name="name"
           placeholder="Name"
@@ -50,8 +51,8 @@ function App() {
           )
         })
         }
-        <button onClick={addFilds}>Add more</button>
-        <button onClick={submit}>Submit</button>
+        <button className="down" onClick={addFilds}>Add more</button>
+        <button className="down" onClick={submit}>Submit</button>
       </form>
     </div>
   );

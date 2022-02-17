@@ -36,3 +36,39 @@
     transform: rotate(360deg);
   }
 }
+h1{
+  padding-top: 270px;
+}
+form{
+  display: grid;
+  text-align: center;
+  justify-content: center;
+  padding-top: 50px;
+}
+input{
+  width:200px;
+  height: 50px;
+  margin-left: 10px;
+  padding-left: 5px;
+}
+button{
+  width: 100px;
+  height: 50px;
+  margin-left: 100px;
+  margin-top: 30px;
+  border-radius: 5px;
+  background-color: rgb(221, 140, 204);
+  border: none;
+  cursor: pointer;
+}
+.down{
+  margin-left: 300px;
+}
+button:hover{
+  background-color: rgb(229, 193, 240);
+}
+.responsive{
+  border: 1px solid gray;
+  padding: 50px;
+  background-color: #61dafb;
+}
